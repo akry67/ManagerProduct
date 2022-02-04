@@ -15,7 +15,7 @@ public class ProductRepository {
     }
 
     public Product[] findAll() {
-        return items;
+        return this.items;
     }
 
     public Product findById(int id) {
@@ -34,9 +34,9 @@ public class ProductRepository {
         for (Product item : items) {
             if (item.getId() != id) {
                 tmp[index] = item;
-                index++;
             }
+            index++;
         }
-        items = tmp;
+        this.items = tmp;
     }
 }

@@ -64,12 +64,6 @@
                             <goal>report</goal>
                         </goals>
                     </execution>
-                    <execution>
-                        <id>check</id>
-                        <goals>
-                            <goal>check</goal>
-                        </goals>
-                    </execution>
                 </executions>
                 <configuration>
                     <rules>
@@ -78,7 +72,7 @@
                                 <limit>
                                     <counter>INSTRUCTION</counter>
                                     <value>COVEREDRATIO</value>
-                                    <minimum>10%</minimum>
+                                    <minimum>100%</minimum>
                                 </limit>
                             </limits>
                         </rule>

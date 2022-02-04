@@ -12,8 +12,10 @@ public class Manager {
         this.repository = repository;
     }
 
+
     public void add(Product product) {
-        repository.save(product);
+        //сохрани продукт в репозитарии
+        this.repository.save(product);
     }
 
     public Product[] searchBy(String text) {
@@ -22,6 +24,7 @@ public class Manager {
             if (matches(product, text)) {
                 Product[] tmp = new Product[result.length + 1];
                 // используйте System.arraycopy, чтобы скопировать всё из result в tmp
+                System.arraycopy(result, 0, tmp, 0, result.length);
                 tmp[tmp.length - 1] = product;
                 result = tmp;
             }
@@ -47,6 +50,7 @@ public class Manager {
                 return true;
             }
             if (smartphone.getName().contains(search)) {
+                return true;
             }
         }
         return false;
