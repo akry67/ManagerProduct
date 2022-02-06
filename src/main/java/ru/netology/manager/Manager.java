@@ -1,12 +1,14 @@
-package ru.netology.domain;
+package ru.netology.manager;
 
+import ru.netology.domain.Book;
+import ru.netology.domain.Product;
+import ru.netology.domain.Smartphone;
 import ru.netology.repository.ProductRepository;
 
 public class Manager {
     // добавьте необходимые поля, конструкторы и методы
 
     private ProductRepository repository;
-    Product[] products = new Product[0];
 
     public Manager(ProductRepository repository) {
         this.repository = repository;
